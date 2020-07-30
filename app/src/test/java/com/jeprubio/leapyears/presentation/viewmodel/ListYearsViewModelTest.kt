@@ -9,7 +9,7 @@ class ListYearsViewModelTest {
     private var sut = ListYearsViewModel()
 
     @Test
-    fun `Can create a list of years with all years as common year from a parameter pass down to 0`() {
+    fun `Can create a list of years with all years from a parameter pass down to 0`() {
         // Arrange
         val initialYear = 2020
 
