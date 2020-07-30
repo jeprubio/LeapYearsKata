@@ -1,4 +1,4 @@
-package com.jeprubio.leapyears.ui
+package com.jeprubio.leapyears.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

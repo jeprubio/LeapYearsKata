@@ -1,4 +1,4 @@
-package com.jeprubio.leapyears.ui
+package com.jeprubio.leapyears.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jeprubio.leapyears.R
-import com.jeprubio.leapyears.viewmodel.ListYearsViewModel
+import com.jeprubio.leapyears.presentation.viewmodel.ListYearsViewModel
 
 class ListYearsFragment : Fragment() {
 

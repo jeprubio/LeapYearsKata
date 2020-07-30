@@ -1,4 +1,4 @@
-package com.jeprubio.leapyears.viewmodel
+package com.jeprubio.leapyears.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 
