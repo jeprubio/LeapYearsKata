@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Leap Years</string>
+    <string name="list_years_fragment">List Years</string>
+</resources>
