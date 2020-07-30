@@ -1,11 +1,17 @@
 package com.jeprubio.leapyears.presentation.viewmodel
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import junit.framework.TestCase.assertFalse
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
+import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.TestRule
 
 class ListYearsViewModelTest {
+    @get:Rule
+    var testRule: TestRule = InstantTaskExecutorRule()
+
     private var sut = ListYearsViewModel()
 
     @Test
@@ -14,10 +20,10 @@ class ListYearsViewModelTest {
         val initialYear = 2020
 
         // Act
-        val yearsList = sut.createYearsList(initialYear)
+        sut.createYearsList(initialYear)
 
         // Assert
-        assertEquals(initialYear + 1, yearsList.size)
+        assertEquals(initialYear + 1, sut.yearsList.value?.size)
     }
 
     @Test
