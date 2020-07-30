@@ -1,5 +1,6 @@
 package com.jeprubio.leapyears.presentation.viewmodel
 
+import junit.framework.TestCase.assertFalse
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -29,6 +30,21 @@ class ListYearsViewModelTest {
 
         // Assert
         assertTrue(response)
+    }
+
+    @Test
+    fun `All years divisible by 100 but not by 400 are NOT leap years (so, for example, 1700, 1800, and 1900 were NOT leap years, NOR will 2100 be a leap year)`() {
+        // Act
+        val responseFor1700 = sut.isLeapYear(1700)
+        val responseFor1800 = sut.isLeapYear(1800)
+        val responseFor1900 = sut.isLeapYear(1900)
+        val responseFor2100 = sut.isLeapYear(2100)
+
+        // Assert
+        assertFalse(responseFor1700)
+        assertFalse(responseFor1800)
+        assertFalse(responseFor1900)
+        assertFalse(responseFor2100)
     }
 
 }
