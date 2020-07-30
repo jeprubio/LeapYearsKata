@@ -1,7 +1,6 @@
 package com.jeprubio.leapyears.domain.model
 
-import junit.framework.TestCase.assertEquals
-import junit.framework.TestCase.assertTrue
+import junit.framework.TestCase.*
 import org.junit.Test
 
 class YearItemTest {
@@ -13,5 +12,15 @@ class YearItemTest {
         // Assert
         assertEquals(2020, yearInfo.year)
         assertTrue(yearInfo.isLeapYear)
+    }
+
+    @Test
+    fun `Year info can be stored for common years`() {
+        // Act
+        val yearInfo = YearItem(2019, false)
+
+        // Assert
+        assertEquals(2019, yearInfo.year)
+        assertFalse(yearInfo.isLeapYear)
     }
 }
