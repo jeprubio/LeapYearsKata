@@ -15,7 +15,7 @@ class ListYearsViewModelTest {
     private var sut = ListYearsViewModel()
 
     @Test
-    fun `Can create a list of years with all years from a parameter pass down to 0`() {
+    fun `Can create a list of years with all years from a parameter pass down to 1752`() {
         // Arrange
         val initialYear = 2020
 
@@ -23,7 +23,7 @@ class ListYearsViewModelTest {
         sut.createYearsList(initialYear)
 
         // Assert
-        assertEquals(initialYear + 1, sut.yearsList.value?.size)
+        assertEquals(initialYear - 1752 + 1, sut.yearsList.value?.size)
     }
 
     @Test

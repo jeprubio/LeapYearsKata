@@ -12,7 +12,7 @@ class ListYearsViewModel : ViewModel() {
 
     fun createYearsList(initialYear: Int) {
         val yearsList = mutableListOf<YearItem>()
-        for (year in initialYear downTo 0) {
+        for (year in initialYear downTo 1752) {
             val yearType = if (isLeapYear(year)) YearType.LeapYear else YearType.CommonYear
             yearsList.add(YearItem(year.toLong(), yearType))
         }
