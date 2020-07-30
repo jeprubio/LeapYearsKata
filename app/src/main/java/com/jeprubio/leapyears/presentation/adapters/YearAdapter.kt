@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jeprubio.leapyears.R
 import com.jeprubio.leapyears.domain.model.YearItem
+import com.jeprubio.leapyears.domain.model.YearType
 import kotlinx.android.synthetic.main.year.view.*
 
 
@@ -33,7 +34,11 @@ class YearAdapter(var items: List<YearItem> = arrayListOf()) :
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: YearItem) = with(itemView) {
             year.text = item.year.toString()
-            year.isLeapYear.text = if (item.isLeapYear) "Leap Year" else "Common Year"
+            year.isLeapYear.text = when (item.yearType) {
+                YearType.LeapYear -> "Leap Year"
+                YearType.CommonYear -> "Common Year"
+                else -> "Undefined year"
+            }
         }
     }
 }
