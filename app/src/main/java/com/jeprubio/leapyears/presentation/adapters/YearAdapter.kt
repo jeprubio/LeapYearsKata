@@ -34,7 +34,7 @@ class YearAdapter(var items: List<YearItem> = arrayListOf()) :
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: YearItem) = with(itemView) {
             year.text = item.year.toString()
-            year.isLeapYear.text = when (item.yearType) {
+            isLeapYear.text = when (item.yearType) {
                 YearType.LeapYear -> "Leap Year"
                 YearType.CommonYear -> "Common Year"
                 else -> "Undefined year"

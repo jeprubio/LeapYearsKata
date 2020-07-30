@@ -9,6 +9,5 @@
         android:id="@+id/list_years_fragment"
         android:name="com.jeprubio.leapyears.presentation.ui.ListYearsFragment"
         android:label="@string/list_years_fragment"
-        tools:layout="@layout/list_years_fragment">
-    </fragment>
+        tools:layout="@layout/list_years_fragment"></fragment>
 </navigation>
