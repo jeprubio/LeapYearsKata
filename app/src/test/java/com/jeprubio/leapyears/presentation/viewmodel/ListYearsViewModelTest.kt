@@ -1,6 +1,7 @@
 package com.jeprubio.leapyears.presentation.viewmodel
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class ListYearsViewModelTest {
@@ -16,6 +17,18 @@ class ListYearsViewModelTest {
 
         // Assert
         assertEquals(initialYear + 1, yearsList.size)
+    }
+
+    @Test
+    fun `All years divisible by 400 ARE leap years (so, for example, 2000 was indeed a leap year)`() {
+        // Arrange
+        val testYear = 2000
+
+        // Act
+        val response = sut.isLeapYear(testYear)
+
+        // Assert
+        assertTrue(response)
     }
 
 }

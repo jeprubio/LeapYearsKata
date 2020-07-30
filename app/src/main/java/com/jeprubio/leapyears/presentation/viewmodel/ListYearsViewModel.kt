@@ -12,4 +12,11 @@ class ListYearsViewModel : ViewModel() {
         }
         return yearsList
     }
+
+    fun isLeapYear(year: Int): Boolean {
+        if (year % 400 == 0)
+            return true
+
+        return false
+    }
 }
