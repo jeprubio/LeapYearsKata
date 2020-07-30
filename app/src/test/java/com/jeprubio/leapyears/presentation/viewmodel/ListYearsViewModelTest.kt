@@ -59,4 +59,16 @@ class ListYearsViewModelTest {
         assertTrue(responseFor2016)
     }
 
+    @Test
+    fun `All years not divisible by 4 are NOT leap years (for example, 2017, 2018, 2019)`() {
+        val responseFor2017 = sut.isLeapYear(2017)
+        val responseFor2018 = sut.isLeapYear(2018)
+        val responseFor2019 = sut.isLeapYear(2019)
+
+        // Assert
+        assertFalse(responseFor2017)
+        assertFalse(responseFor2018)
+        assertFalse(responseFor2019)
+    }
+
 }
