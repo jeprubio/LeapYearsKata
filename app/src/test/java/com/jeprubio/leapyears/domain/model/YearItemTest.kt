@@ -1,6 +1,6 @@
 package com.jeprubio.leapyears.domain.model
 
-import junit.framework.TestCase.*
+import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
 class YearItemTest {
